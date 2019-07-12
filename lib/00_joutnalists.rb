@@ -13,6 +13,23 @@ def comb_journa(nbr_jour)
 	
 end
 
-puts comb_journa(handl_twit)
+# puts comb_journa(handl_twit)
 # affiche la methode(variable que l'on injecte dans la méthode)
 
+# Combien d'handle contiennent un numéro ?
+
+def handl_num(nbr_handl_num)
+	tabl_sortie = nbr_handl_num.select do |handl| handl.match(/[0-9]/) end # /\d/ fonctionne aussi
+	tabl_sortie.length
+end
+# p handl_num(handl_twit)
+# puts handl_num(handl_twit)
+
+# Combien d'handle contiennent les 4 lettres du prénom "Aude" à la suite (sans prendre en compte les majuscules) ?
+
+def nbre_quatr_letr(quatr_letr)
+	tabl_sortie = quatr_letr.select do |quatr| quatr.match(/aude/i) end
+	tabl_sortie.length
+end
+
+# puts nbre_quatr_letr(handl_twit)
