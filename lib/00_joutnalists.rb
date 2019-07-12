@@ -33,3 +33,61 @@ def nbre_quatr_letr(quatr_letr)
 end
 
 # puts nbre_quatr_letr(handl_twit)
+
+# Combien commencent par une majuscule (première lettre juste après le @) ?
+
+def debut_maj(prem_maj)
+	tabl_sortie = prem_maj.select do |maj| maj.match(/^@[A-Z]/) end
+	tabl_sortie.length
+end
+
+# puts debut_maj(handl_twit)
+
+# Combien contiennent une majuscule ?
+
+def cont_maj(une_maj)
+	tabl_cont_maj = une_maj.select do |un_maj| un_maj.match(/[A-Z]/) end
+	tabl_cont_maj.length
+end
+
+# puts cont_maj(handl_twit)
+
+# Combien y a-t-il de underscore _ dans tous les pseudos confondus ?
+
+
+def comp_undersc(nbr_undersc)
+	nbr_undersc.join.count('_')
+end
+
+# puts comp_undersc(handl_twit)
+
+
+# Trie la liste de handle par ordre alphabétique.
+
+def ordr_alpha(ordr)
+	ordr.sort
+end
+
+# puts ordr_alpha(handl_twit)
+
+
+# Quels sont les 50 handles les plus courts de ce array ?
+
+def cinqu_handl_court(cinqu_handl)
+	cinqu = cinqu_handl.sort_by { |x| x.length }
+	cinquante = cinqu[0..49]
+	
+	cinquante.each_with_index do |handle, id|
+	puts "#{id} :  #{handle}"
+	end
+end
+
+ # cinqu_handl_court(handl_twit)
+
+ # Quelle est la position dans l'array de la personne @epenser ?  
+
+ def epenser_pos(ep_pos)
+ 	ep_pos.index("@epenser")
+ end     
+
+ puts epenser_pos(handl_twit)  
