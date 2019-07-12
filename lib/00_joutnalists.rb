@@ -6,12 +6,13 @@ handl_twit = ["@jcunniet","@PaulLampon","@Aziliz31","@ssoumier","@marionsouzeau"
 # puts array_handl
 
 def comb_journa(nbr_jour)
+	# méthode pour compter le nombre de journalistes
+	# Variable (nbr_jour) associé au tableau handl_twit dans l'appel de la méthode.
+	# handl_twit va remplacer cette variable dans la méthode, donc PAS BESOIN de la changer partout dans la méthode !!!!!
 	return nbr_jour.length
 	
 end
 
 puts comb_journa(handl_twit)
+# affiche la methode(variable que l'on injecte dans la méthode)
 
-# end
-
-# puts comb_journa
